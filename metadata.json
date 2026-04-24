@@ -1,0 +1,12 @@
+{
+  "name": "Stealth Booster Elite Multi-Network",
+  "description": "Multi-network SaaS platform for TikTok, YouTube, and Instagram creators. Featuring OAuth 2.0 integration, AI content synthesis, growth automation, and dynamic AI-calculated commissions.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "AI Content Synthesis",
+    "Growth Automation",
+    "Earnings Analytics"
+  ]
+}
