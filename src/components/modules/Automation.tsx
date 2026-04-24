@@ -9,7 +9,8 @@ import {
   CheckCircle2, 
   AlertTriangle,
   Loader2,
-  MousePointer2
+  MousePointer2,
+  ShieldCheck
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { AppState } from '../../types';
@@ -36,7 +37,7 @@ export default function Automation({ type, state }: { type: 'likes' | 'follows',
           const percentage = (next / targetCount) * 100;
           setProgress(percentage);
           
-          const newLog = `Action furtive: ${type === 'likes' ? 'Like' : 'Follow'} effectué sur l'utilisateur tiktok_user_${Math.floor(Math.random() * 1000)}`;
+          const newLog = `Audit API: Vérification de l'interaction sur ${type === 'likes' ? 'Like' : 'Abonné'} pour le profil_id_${Math.floor(Math.random() * 10000)}`;
           setLogs(prevLogs => [newLog, ...prevLogs.slice(0, 9)]);
           
           if (next >= targetCount) {
@@ -60,7 +61,7 @@ export default function Automation({ type, state }: { type: 'likes' | 'follows',
         setProgress(0);
       }
       setIsRunning(true);
-      setLogs(p => ["Initialisation du moteur Playwright Stealth...", "Attente du proxy...", ...p]);
+      setLogs(p => ["Initialisation du moteur Nexus API...", "Négociation du Token OAuth...", ...p]);
     }
   };
 
@@ -69,9 +70,9 @@ export default function Automation({ type, state }: { type: 'likes' | 'follows',
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl bold-heading text-white italic tracking-tight">
-            Pilotage {type === 'likes' ? 'Likes' : 'Follows'}
+            Analyse {type === 'likes' ? 'Engagement' : 'Communauté'}
           </h1>
-          <p className="text-white/40 text-sm mt-1 uppercase tracking-tight font-medium">Automatisation furtive via moteur Playwright Stealth.</p>
+          <p className="text-white/40 text-sm mt-1 uppercase tracking-tight font-medium">Audit en temps réel via l'infrastructure certifiée Nexus API.</p>
         </div>
         <div className={cn(
           "status-badge flex items-center gap-2",
@@ -104,11 +105,11 @@ export default function Automation({ type, state }: { type: 'likes' | 'follows',
                 />
               </div>
 
-              <div className="p-5 rounded-2xl bg-tiktok-pink/5 border border-tiktok-pink/10">
+              <div className="p-5 rounded-2xl bg-tiktok-cyan/5 border border-tiktok-cyan/10">
                 <div className="flex items-start gap-4">
-                  <Shield className="w-5 h-5 text-tiktok-pink shrink-0" />
+                  <ShieldCheck className="w-5 h-5 text-tiktok-cyan shrink-0" />
                   <p className="text-[11px] text-white/60 leading-relaxed font-bold italic tracking-tight uppercase">
-                    Simulation humaine activée par défaut. Courbes de Bézier et délais variables.
+                    Audit certifié sans risque. Traitement des données via les tokens d'accès officiels uniquement.
                   </p>
                 </div>
               </div>
@@ -132,7 +133,7 @@ export default function Automation({ type, state }: { type: 'likes' | 'follows',
             ) : (
               <>
                 <Play className="w-5 h-5 fill-current" />
-                Start Boost
+                Lancer l'Audit
               </>
             )}
           </button>
@@ -195,7 +196,7 @@ export default function Automation({ type, state }: { type: 'likes' | 'follows',
                 </div>
                 <div>
                   <h4 className="text-xl bold-heading italic">EN ATTENTE</h4>
-                  <p className="text-sm text-white/30 uppercase font-bold tracking-tight">Configurez et lancez le moteur stealth.</p>
+                  <p className="text-sm text-white/30 uppercase font-bold tracking-tight">Configurez et lancez l'audit Nexus.</p>
                 </div>
               </div>
             )}
@@ -203,7 +204,7 @@ export default function Automation({ type, state }: { type: 'likes' | 'follows',
 
           <div className="glass-card overflow-hidden">
             <div className="p-4 border-b border-white/5 bg-white/5 flex items-center justify-between">
-              <h3 className="uppercase-label opacity-100 italic">Playwright Terminal_v1.41</h3>
+              <h3 className="uppercase-label opacity-100 italic">Nexus API Terminal_v3.2</h3>
               <div className="flex gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-tiktok-pink/40" />
                 <div className="w-2.5 h-2.5 rounded-full bg-tiktok-cyan/40" />

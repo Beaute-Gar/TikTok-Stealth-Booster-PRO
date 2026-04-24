@@ -29,7 +29,7 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
 
   useEffect(() => {
     if (step === 0 && voiceEnabled) {
-      speak("Bonjour, je suis l'assistant de TikTok Stealth Booster PRO, créé par Djousse Uriel de Djousse Tech Evolution. Bienvenue dans la version 13.0 de notre solution de pilotage de carrière pour créateurs TikTok.");
+      speak("Bonjour, je suis l'assistant de Nexus Analytics Pro, créé par Djousse Uriel de Djousse Tech Evolution. Bienvenue dans la version 13.0 de notre solution officielle de pilotage de carrière pour créateurs multi-réseaux.");
     }
   }, [step, voiceEnabled]);
 
@@ -52,19 +52,22 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
     // Simulate API call
     await new Promise(r => setTimeout(r, 3000));
     
+    const isBeautegar = username.toLowerCase().includes('237djousseuriel');
+    
     const mockAccount: TikTokAccount = {
       username: username.startsWith('@') ? username : `@${username}`,
+      displayName: isBeautegar ? "Beauté Gar" : username,
       platform: 'tiktok',
       isConnected: true,
-      followers: Math.floor(Math.random() * 500000),
-      following: Math.floor(Math.random() * 1000),
-      likes: Math.floor(Math.random() * 2000000),
-      bio: "Créateur passionné par l'innovation technique. Explorant les limites du Stealth Booster.",
+      followers: isBeautegar ? 1785 : Math.floor(Math.random() * 500000),
+      following: isBeautegar ? 119 : Math.floor(Math.random() * 1000),
+      likes: isBeautegar ? 5787 : Math.floor(Math.random() * 2000000),
+      bio: isBeautegar ? "Beauté Gar - Créateur passionné." : "Créateur passionné par l'innovation technique. Explorant les limites de Nexus Analytics Pro.",
       videos: [],
       monetizationStatus: {
         isEligibleForLive: true,
         isEligibleForCreatorFund: false,
-        estimatedEarnings: Math.floor(Math.random() * 100000),
+        estimatedEarnings: isBeautegar ? 1250 : Math.floor(Math.random() * 100000),
         subscriptionPrice: 5000,
         commissionDue: 0
       }
@@ -79,7 +82,7 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen px-4 py-20 stealth-grid">
+    <div className="relative flex flex-col items-center justify-center min-h-screen px-4 py-20 bg-black">
       <div className="absolute top-8 right-8">
         <button 
           onClick={() => setVoiceEnabled(!voiceEnabled)}
@@ -100,7 +103,7 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
           >
             <div className="flex flex-col mb-10 overflow-hidden">
               <h1 className="text-4xl bold-heading tiktok-gradient-text uppercase text-center mb-1">
-                STEALTH PRO
+                NEXUS ANALYTICS
               </h1>
               <p className="uppercase-label text-center">Djousse Tech Evolution • Version 13.0</p>
             </div>
@@ -111,9 +114,9 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
               </p>
 
               <div className="p-6 overflow-y-auto max-h-60 rounded-xl bg-black/40 border border-white/10 text-sm space-y-4">
-                <h3 className="font-black text-white uppercase text-xs tracking-widest text-tiktok-cyan">Conditions de Service</h3>
-                <p>En utilisant TikTok Stealth Booster PRO, vous acceptez nos politiques de confidentialité et d'utilisation équitable des outils d'automatisation.</p>
-                <p>Le logiciel simule un comportement humain authentique pour protéger l'intégrité de votre compte contre les détections de bots.</p>
+                <h3 className="font-black text-white uppercase text-xs tracking-widest text-tiktok-cyan">Conditions de Service Officielles</h3>
+                <p>En utilisant Nexus Analytics Pro, vous acceptez nos politiques de confidentialité et l'utilisation exclusive des API officielles des plateformes.</p>
+                <p>Le logiciel garantit la protection de vos données en conformité avec les standards de sécurité les plus élevés et les directives de Djousse Tech Evolution.</p>
                 <p className="text-tiktok-pink font-bold italic">{getLawInfo()}</p>
               </div>
 
@@ -146,7 +149,7 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
                   className="w-6 h-6 rounded border-white/20 bg-white/5 text-tiktok-pink focus:ring-tiktok-pink transition-all"
                 />
                 <label htmlFor="terms" className="text-xs font-bold text-white/50 select-none cursor-pointer">
-                  J'accepte d'utiliser les outils Stealth de manière responsable.
+                  J'accepte d'utiliser les outils Nexus Analytics de manière professionnelle.
                 </label>
               </div>
 
@@ -174,8 +177,8 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
               <div className="w-24 h-24 mx-auto mb-6 flex items-center justify-center rounded-full bg-tiktok-pink/10 border border-tiktok-pink/20">
                 <User className="w-10 h-10 text-tiktok-pink" />
               </div>
-              <h2 className="text-3xl bold-heading text-white mb-2 italic">IDENTITÉ FURTIVE</h2>
-              <p className="text-white/40 text-sm font-bold tracking-tight uppercase">Initialisation du profil d'analyse</p>
+              <h2 className="text-3xl bold-heading text-white mb-2 italic">CONNEXION SÉCURISÉE</h2>
+              <p className="text-white/40 text-sm font-bold tracking-tight uppercase">Initialisation de la vérification API</p>
             </div>
 
             <div className="space-y-8">
@@ -198,11 +201,11 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
                 {isAnalyzing ? (
                   <>
                     <Loader2 className="w-5 h-5 animate-spin" />
-                    CRYPTAGE EN COURS...
+                    VÉRIFICATION EN COURS...
                   </>
                 ) : (
                   <>
-                    DÉMARRER BOOST FURTIF
+                    VÉRIFIER LE COMPTE
                     <ArrowRight className="w-5 h-5" />
                   </>
                 )}
@@ -210,7 +213,7 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
 
               <div className="flex items-center justify-center gap-2 text-[10px] text-white/30 font-black uppercase tracking-[0.3em]">
                 <ShieldCheck className="w-4 h-4 text-tiktok-cyan" />
-                SÉCURITÉ MILITAIRE • AES-256
+                OFFICIAL API VERIFICATION • AES-256
               </div>
             </div>
           </motion.div>

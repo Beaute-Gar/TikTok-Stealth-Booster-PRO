@@ -66,12 +66,12 @@ export default function Monetization({ state }: { state: AppState }) {
     <div className="space-y-10">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl bold-heading text-white italic tracking-tight uppercase">MONÉTISATION INTELLIGENTE</h1>
-          <p className="text-white/40 text-sm mt-1 uppercase tracking-tight font-medium">Analyse des revenus multi-plateformes et commissionnement dynamique.</p>
+          <h1 className="text-3xl bold-heading text-white italic tracking-tight uppercase">Nexus Finance</h1>
+          <p className="text-white/40 text-sm mt-1 uppercase tracking-tight font-medium">Analyse consolidée des revenus et gestion des frais de service.</p>
         </div>
         <div className="status-badge bg-tiktok-cyan text-black flex items-center gap-2">
           <TrendingUp className="w-3 h-3" />
-          Revenue Optimizer Active
+          Revenue Tracker Verified
         </div>
       </div>
 
@@ -95,7 +95,7 @@ export default function Monetization({ state }: { state: AppState }) {
 
           <div className="space-y-4">
              <button className="w-full mt-6 py-5 bg-white text-black font-black uppercase text-sm tracking-widest rounded-2xl flex items-center justify-center gap-3 hover:scale-[0.98] transition-all">
-              Retrait MTN MoMo
+              Gérer les Paiements
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -109,7 +109,7 @@ export default function Monetization({ state }: { state: AppState }) {
           
           <div>
             <div className="flex items-center justify-between mb-6">
-              <h3 className="uppercase-label italic opacity-100">Commission AI Stealth</h3>
+              <h3 className="uppercase-label italic opacity-100">Frais de Service Nexus</h3>
               <div className="status-badge bg-tiktok-cyan text-black py-0.5 text-[8px]">{commissionRate}% RATE</div>
             </div>
             <div className="flex flex-col mb-10">
@@ -117,7 +117,7 @@ export default function Monetization({ state }: { state: AppState }) {
               <span className="text-2xl font-black text-tiktok-cyan tracking-widest mt-2 uppercase">FCFA</span>
             </div>
             <p className="text-xs text-white/50 leading-relaxed font-bold italic tracking-tight uppercase">
-              Prélèvement calculé sur la croissance générée par nos algorithmes.
+              Frais calculés basés sur la performance réelle auditée via API.
             </p>
           </div>
 
@@ -155,7 +155,7 @@ export default function Monetization({ state }: { state: AppState }) {
         <div className="glass-card p-10">
           <div className="flex items-center justify-between mb-10">
             <h3 className="text-xl bold-heading italic">ÉLIGIBILITÉ PROGRAMMES</h3>
-            <div className="status-badge border border-white/10 text-white/40 font-black">Playwright Security v1.41</div>
+            <div className="status-badge border border-white/10 text-white/40 font-black">Official API Core v3.2</div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

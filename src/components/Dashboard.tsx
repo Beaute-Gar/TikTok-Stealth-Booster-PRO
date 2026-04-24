@@ -15,7 +15,8 @@ import {
   ExternalLink,
   ChevronRight,
   Share2,
-  Receipt
+  Receipt,
+  ShieldCheck
 } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { AppState } from '../types';
@@ -38,15 +39,15 @@ interface DashboardProps {
 
 export default function Dashboard({ state, setState }: DashboardProps) {
   const tabs = [
-    { id: 'overview', label: 'Overview', icon: LayoutDashboard },
-    { id: 'connect', label: 'Plateformes', icon: Share2 },
-    { id: 'analytics', label: 'Analyse', icon: BarChart3 },
-    { id: 'likes', label: 'Likes', icon: Heart },
-    { id: 'follows', label: 'Follows', icon: UserPlus },
-    { id: 'creator', label: 'IA Creator', icon: Zap },
+    { id: 'overview', label: 'Poste de contrôle', icon: LayoutDashboard },
+    { id: 'connect', label: 'Connexions', icon: Share2 },
+    { id: 'analytics', label: 'Audience Info', icon: BarChart3 },
+    { id: 'likes', label: 'Engagement', icon: Heart },
+    { id: 'follows', label: 'Communauté', icon: UserPlus },
+    { id: 'creator', label: 'IA Content', icon: Zap },
     { id: 'monetization', label: 'Monétisation', icon: DollarSign },
-    { id: 'commissions', label: 'Commissions', icon: Receipt },
-    { id: 'growth', label: 'Croissance', icon: TrendingUp },
+    { id: 'commissions', label: 'Facturation', icon: Receipt },
+    { id: 'growth', label: 'Stratégie', icon: TrendingUp },
     { id: 'settings', label: 'Paramètres', icon: Settings },
   ];
 
@@ -81,9 +82,9 @@ export default function Dashboard({ state, setState }: DashboardProps) {
         <div className="p-8">
           <div className="flex flex-col mb-1 pt-2">
             <h1 className="text-2xl font-black tracking-tighter italic tiktok-gradient-text uppercase">
-              STEALTH PRO
+              NEXUS PRO
             </h1>
-            <p className="uppercase-label">Djousse Tech Evolution</p>
+            <p className="uppercase-label">{state.currentAccount?.displayName || "Djousse Tech Evolution"}</p>
           </div>
         </div>
 
@@ -111,18 +112,18 @@ export default function Dashboard({ state, setState }: DashboardProps) {
         </nav>
 
         <div className="p-8 mt-auto border-t border-white/10">
-          <div className="p-5 rounded-2xl bg-gradient-to-br from-tiktok-pink/20 to-tiktok-cyan/10 border border-white/10 mb-4">
+          <div className="p-5 rounded-2xl bg-gradient-to-br from-tiktok-cyan/20 to-white/5 border border-white/10 mb-4">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-[10px] font-black text-tiktok-pink uppercase tracking-widest">Version 13.0 Gold</span>
-              <Zap className="w-4 h-4 text-tiktok-pink fill-current" />
+              <span className="text-[10px] font-black text-tiktok-cyan uppercase tracking-widest">Connect V13.0</span>
+              <ShieldCheck className="w-4 h-4 text-tiktok-cyan" />
             </div>
-            <p className="text-xs text-white/70 leading-relaxed font-medium">Mode furtif actif. <br/>Proxy: Yaoundé, CM (Stable)</p>
+            <p className="text-xs text-white/70 leading-relaxed font-medium">Système certifié API Official. <br/>Région: {state.country}</p>
           </div>
 
           <button 
             onClick={() => {
               if (confirm("Voulez-vous vraiment vous déconnecter ?")) {
-                localStorage.removeItem('tiktok_booster_state');
+                localStorage.removeItem('nexus_analytics_state');
                 window.location.reload();
               }
             }}
@@ -139,8 +140,8 @@ export default function Dashboard({ state, setState }: DashboardProps) {
         {/* Header */}
         <header className="h-20 border-b border-white/10 flex items-center justify-between px-10 bg-app-bg/80 backdrop-blur-md z-30">
           <div className="flex items-center gap-6">
-            <div className="status-badge bg-tiktok-cyan text-black">Trial Mode</div>
-            <p className="text-sm font-medium">Temps restant: <span className="text-tiktok-pink font-black tracking-widest ml-1">{trialTimeLeft()}</span></p>
+            <div className="status-badge bg-white/10 text-white">Full Access</div>
+            <p className="text-sm font-medium">Statut de la connexion: <span className="text-tiktok-cyan font-black tracking-widest ml-1">SYNC OPTIMAL</span></p>
           </div>
 
           <div className="flex items-center gap-6">

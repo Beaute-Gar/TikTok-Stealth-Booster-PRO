@@ -2,6 +2,7 @@ export type PlatformType = 'tiktok' | 'youtube' | 'instagram';
 
 export interface BaseAccount {
   username: string;
+  displayName?: string;
   avatar?: string;
   followers: number;
   following: number;

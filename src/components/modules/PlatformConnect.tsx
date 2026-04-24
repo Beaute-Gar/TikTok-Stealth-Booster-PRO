@@ -152,9 +152,9 @@ export default function PlatformConnect({ state, setState }: PlatformConnectProp
             <Lock className="w-10 h-10 text-white/40" />
           </div>
           <div className="flex-1">
-            <h4 className="text-xl bold-heading italic mb-3 uppercase">Architecture de Sécurité Stealth</h4>
+            <h4 className="text-xl bold-heading italic mb-3 uppercase">Standard de Sécurité Nexus</h4>
             <p className="text-sm text-white/40 leading-relaxed font-bold uppercase tracking-tight max-w-3xl mb-8">
-              Nous n'accédons jamais à vos mots de passe. La connexion utilise des jetons OAuth 2.0 révocables à tout moment. Les données sont chiffrées au repos via AES-256 et transitent par nos serveurs proxy de Yaoundé pour garantir une stabilité géographique.
+              Nous n'accédons jamais à vos mots de passe. La connexion utilise des jetons OAuth 2.0 révocables à tout moment. Les données sont chiffrées au repos via AES-256 et transitent par des infrastructures Cloud certifiées pour garantir une conformité totale avec les standards de Djousse Tech Evolution.
             </p>
             <div className="flex flex-wrap gap-6">
               <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-tiktok-cyan">

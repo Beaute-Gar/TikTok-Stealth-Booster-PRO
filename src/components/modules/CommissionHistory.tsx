@@ -45,12 +45,12 @@ export default function CommissionHistory({ state }: CommissionHistoryProps) {
     <div className="space-y-10">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl bold-heading text-white italic tracking-tight uppercase">SYSTÈME DE COMMISSIONS</h1>
-          <p className="text-white/40 text-sm mt-1 uppercase tracking-tight font-medium">Gestion des prélèvements sur revenus générés via l'optimisation Stealth.</p>
+          <h1 className="text-3xl bold-heading text-white italic tracking-tight uppercase">SYSTÈME DE FACTURATION</h1>
+          <p className="text-white/40 text-sm mt-1 uppercase tracking-tight font-medium">Gestion des prélèvements sur revenus audités via Nexus API.</p>
         </div>
-        <div className="status-badge bg-tiktok-pink text-white flex items-center gap-2">
+        <div className="status-badge bg-tiktok-cyan text-black flex items-center gap-2">
           <Receipt className="w-3 h-3" />
-          Facturation Dynamique
+          Rapports Officiels
         </div>
       </div>
 
@@ -155,7 +155,7 @@ export default function CommissionHistory({ state }: CommissionHistoryProps) {
       <div className="flex items-center gap-6 p-8 rounded-3xl bg-white/5 border border-white/10">
         <AlertCircle className="w-8 h-8 text-tiktok-cyan shrink-0" />
         <p className="text-sm text-white/50 leading-relaxed font-bold uppercase tracking-tight">
-          Les commissions sont calculées automatiquement par notre moteur de Machine Learning en fonction de votre <span className="text-white">engagement relatif</span> et de votre <span className="text-white">volume de vues officiel</span>. Le non-règlement des commissions peut entraîner une suspension temporaire des outils de boost Stealth.
+          Les factures sont calculées automatiquement par notre moteur d'audit en fonction de votre <span className="text-white">engagement relatif</span> et de votre <span className="text-white">volume de vues officiel</span>. Le non-règlement des factures peut entraîner une suspension temporaire des accès Nexus Pro.
         </p>
       </div>
     </div>

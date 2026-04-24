@@ -11,7 +11,7 @@ import { AppState, TikTokAccount } from './types';
 
 export default function App() {
   const [state, setState] = useState<AppState>(() => {
-    const saved = localStorage.getItem('tiktok_booster_state');
+    const saved = localStorage.getItem('nexus_analytics_state');
     const defaults: AppState = {
       isOnboarded: false,
       acceptedTerms: false,
@@ -33,7 +33,7 @@ export default function App() {
   });
 
   useEffect(() => {
-    localStorage.setItem('tiktok_booster_state', JSON.stringify(state));
+    localStorage.setItem('nexus_analytics_state', JSON.stringify(state));
   }, [state]);
 
   const handleOnboardingComplete = (account: TikTokAccount, country: string) => {

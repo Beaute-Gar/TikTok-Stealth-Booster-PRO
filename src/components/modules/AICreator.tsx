@@ -12,13 +12,15 @@ import {
   Type as FontIcon,
   Youtube,
   Instagram,
-  Video
+  Video,
+  Play
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { generateTikTokScript } from '../../services/geminiService';
 import Markdown from 'react-markdown';
 import { cn } from '../../lib/utils';
 import { PlatformType } from '../../types';
+import VideoStudio from './VideoStudio';
 
 export default function AICreator() {
   const [theme, setTheme] = useState('');
@@ -26,6 +28,7 @@ export default function AICreator() {
   const [isLoading, setIsLoading] = useState(false);
   const [copied, setCopied] = useState(false);
   const [platform, setPlatform] = useState<PlatformType>('tiktok');
+  const [mode, setMode] = useState<'editor' | 'studio'>('editor');
 
   const handleGenerate = async () => {
     if (!theme) return;
@@ -52,6 +55,10 @@ export default function AICreator() {
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
+
+  if (mode === 'studio') {
+    return <VideoStudio script={script} platform={platform} onBack={() => setMode('editor')} />;
+  }
 
   return (
     <div className="space-y-10">
@@ -138,6 +145,13 @@ export default function AICreator() {
             </div>
             {script && (
               <div className="flex gap-2">
+                <button 
+                  onClick={() => setMode('studio')}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-tiktok-cyan text-black font-black uppercase text-[10px] tracking-widest hover:scale-[1.02] active:scale-[0.98] transition-all mr-2"
+                >
+                  <Play className="w-3 h-3 fill-current" />
+                  Produire Vidéo
+                </button>
                 <button 
                   onClick={copyToClipboard}
                   className="p-2 hover:bg-white/10 rounded-lg transition-colors text-white/40 hover:text-white"

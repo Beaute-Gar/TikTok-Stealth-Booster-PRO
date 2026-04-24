@@ -77,8 +77,8 @@ export default function Overview({ state }: { state: AppState }) {
       {/* Header Info */}
       <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
         <div>
-          <h1 className="text-4xl bold-heading text-white italic tracking-tight uppercase">Dashboard Multi-Réseaux</h1>
-          <p className="text-white/40 text-sm mt-1 uppercase font-bold tracking-tight">Pilotage intelligent v13.0 • Ecosystème Créateur Connecté</p>
+          <h1 className="text-4xl bold-heading text-white italic tracking-tight uppercase">Poste de contrôle</h1>
+          <p className="text-white/40 text-sm mt-1 uppercase font-bold tracking-tight">Unified Creator Metrics • Verified Official Sync</p>
         </div>
         
         <div className="flex gap-4">
@@ -126,7 +126,7 @@ export default function Overview({ state }: { state: AppState }) {
 
             {p.account ? (
               <div>
-                <p className="uppercase-label mb-2 opacity-100 italic">{p.name}</p>
+                <p className="uppercase-label mb-2 opacity-100 italic">{p.account.displayName || p.name}</p>
                 <h3 className="text-3xl font-black text-white italic tracking-tighter mb-1">
                   {p.id === 'youtube' && p.account && 'subscribers' in p.account 
                     ? p.account.subscribers.toLocaleString() 
@@ -199,12 +199,12 @@ export default function Overview({ state }: { state: AppState }) {
         </div>
 
         <div className="space-y-8">
-           <h3 className="text-2xl bold-heading italic uppercase italic tracking-tighter">Alertes Neural Engine</h3>
+           <h3 className="text-2xl bold-heading italic uppercase italic tracking-tighter">Creator Insights</h3>
            <div className="space-y-4">
               {[
-                { title: "Opportunité CPM", desc: "Le CPM au Cameroun est en hausse sur la niche Tech.", type: "cyan" },
-                { title: "Audit de Compte", desc: "YouTube a validé votre éligibilité monétisation.", type: "pink" },
-                { title: "Tendance Détectée", desc: "Challenge audio #douala_vibe gagne +300% /h.", type: "white" },
+                { title: "Optimisation CPM", desc: "Le CPM régional est en hausse sur votre segment principal.", type: "cyan" },
+                { title: "Statut Monétisation", desc: "Validation API confirmée pour les revenus publicitaires.", type: "pink" },
+                { title: "Analyse Auditive", desc: "Le hashtag #vibe_africa génère un engagement record ce matin.", type: "white" },
               ].map((alert, i) => (
                 <div key={i} className={cn(
                   "p-6 rounded-2xl bg-white/[0.03] border-l-4 transition-all hover:bg-white/[0.07] cursor-pointer",
@@ -216,7 +216,7 @@ export default function Overview({ state }: { state: AppState }) {
               ))}
               
               <button className="w-full py-5 bg-white text-black font-black uppercase text-xs tracking-widest hover:scale-[0.98] transition-transform rounded-2xl shadow-[0_10px_30px_rgba(255,255,255,0.1)] mt-4">
-                Démarrer Optimisation Totale
+                Actualiser les Données
               </button>
            </div>
         </div>

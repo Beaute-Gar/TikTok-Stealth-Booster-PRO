@@ -41,14 +41,14 @@ export default function Growth({ state }: { state: AppState }) {
     <div className="space-y-10">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl bold-heading text-white italic tracking-tight uppercase">ANALYSE DE CROISSANCE</h1>
-          <p className="text-white/40 text-sm mt-1 uppercase tracking-tight font-medium">Suivi granulaire des performances et projections algorithmiques.</p>
+          <h1 className="text-3xl bold-heading text-white italic tracking-tight uppercase">Nexus Stratégie</h1>
+          <p className="text-white/40 text-sm mt-1 uppercase tracking-tight font-medium">Suivi officiel des performances et projections via API Nexus.</p>
         </div>
-        <div className="flex items-center gap-4 p-5 rounded-2xl bg-tiktok-pink/10 border border-tiktok-pink/20">
-          <Rocket className="w-10 h-10 text-tiktok-pink" />
+        <div className="flex items-center gap-4 p-5 rounded-2xl bg-tiktok-cyan/10 border border-tiktok-cyan/20">
+          <TrendingUp className="w-10 h-10 text-tiktok-cyan" />
           <div>
-            <p className="text-[10px] font-black text-tiktok-pink uppercase tracking-widest">Vitesse Turbo</p>
-            <p className="text-2xl font-black italic italic tracking-tighter">+45.2%</p>
+            <p className="text-[10px] font-black text-tiktok-cyan uppercase tracking-widest">Performance Réelle</p>
+            <p className="text-2xl font-black italic italic tracking-tighter text-white">+45.2%</p>
           </div>
         </div>
       </div>
@@ -92,8 +92,8 @@ export default function Growth({ state }: { state: AppState }) {
         <div className="lg:col-span-3 glass-card p-10">
           <div className="flex items-center justify-between mb-10">
             <h3 className="text-xl bold-heading italic flex items-center gap-4 uppercase">
-              <TrendingUp className="w-6 h-6 text-tiktok-pink" />
-              ANALYSE PRÉDICTIVE
+              <TrendingUp className="w-6 h-6 text-tiktok-cyan" />
+              PROJECTIONS DE CROISSANCE
             </h3>
             <div className="flex gap-6 uppercase-label italic opacity-100">
               <div className="flex items-center gap-2">
@@ -148,32 +148,32 @@ export default function Growth({ state }: { state: AppState }) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="glass-card p-10 group overflow-hidden relative">
           <div className="relative z-10">
-            <Target className="w-12 h-12 text-tiktok-pink mb-8" />
-            <h3 className="text-2xl bold-heading italic mb-3 uppercase">MODE SNIPER VIRAL</h3>
+            <Target className="w-12 h-12 text-tiktok-cyan mb-8" />
+            <h3 className="text-2xl bold-heading italic mb-3 uppercase">Nexus Content Optimizer</h3>
             <p className="text-sm text-white/50 mb-8 leading-relaxed font-bold tracking-tight uppercase">
-              Ciblage chirurgical des pics d'engagement. Simulation cloud pour un anonymat total.
+              Optimisation précise basée sur vos données réelles. Analyse des tendances via API.
             </p>
-            <button className="flex items-center gap-3 text-xs font-black uppercase tracking-[0.2em] text-tiktok-pink group-hover:gap-5 transition-all">
-              DÉMARRER OPTIMISATION
+            <button className="flex items-center gap-3 text-xs font-black uppercase tracking-[0.2em] text-tiktok-cyan group-hover:gap-5 transition-all">
+              DÉMARRER ANALYSE
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
-          <Zap className="absolute -bottom-10 -right-10 w-48 h-48 text-tiktok-pink/5 group-hover:scale-110 transition-transform" />
+          <Zap className="absolute -bottom-10 -right-10 w-48 h-48 text-tiktok-cyan/5 group-hover:scale-110 transition-transform" />
         </div>
 
         <div className="glass-card p-10 group overflow-hidden relative">
           <div className="relative z-10">
-            <Award className="w-12 h-12 text-tiktok-cyan mb-8" />
-            <h3 className="text-2xl bold-heading italic mb-3 uppercase">CERTIFICATION STEALTH</h3>
+            <Award className="w-12 h-12 text-white mb-8" />
+            <h3 className="text-2xl bold-heading italic mb-3 uppercase">Certification Nexus</h3>
             <p className="text-sm text-white/50 mb-8 leading-relaxed font-bold tracking-tight uppercase">
-              Badge de conformité algorithmique v13. Débloquez des limites de boost extrêmes.
+              Conformité API v13 validée. Accédez à des rapports d'audience exclusifs et certifiés.
             </p>
-            <button className="flex items-center gap-3 text-xs font-black uppercase tracking-[0.2em] text-tiktok-cyan group-hover:gap-5 transition-all">
-              PASSER LE TEST
+            <button className="flex items-center gap-3 text-xs font-black uppercase tracking-[0.2em] text-white group-hover:gap-5 transition-all">
+              VOIR LE RAPPORT
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
-          <Star className="absolute -bottom-10 -right-10 w-48 h-48 text-tiktok-cyan/5 group-hover:scale-110 transition-transform" />
+          <Star className="absolute -bottom-10 -right-10 w-48 h-48 text-white/5 group-hover:scale-110 transition-transform" />
         </div>
       </div>
     </div>

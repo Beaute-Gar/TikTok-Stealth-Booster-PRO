@@ -41,8 +41,8 @@ export default function Analytics({ state }: { state: AppState }) {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-display font-bold text-white mb-2">Analyse Approfondie</h1>
-          <p className="text-gray-400">Décortiquez chaque pixel de votre performance TikTok.</p>
+          <h1 className="text-3xl font-display font-bold text-white mb-2">Nexus Audience Insights</h1>
+          <p className="text-gray-400">Analyse de performance multi-réseaux via API officielle.</p>
         </div>
         <div className="flex gap-2">
           {['7j', '28j', '60j'].map(t => (
@@ -57,14 +57,14 @@ export default function Analytics({ state }: { state: AppState }) {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Audience Heatmap Simulation */}
+        {/* Audience Engagement Heatmap */}
         <div className="lg:col-span-2 glass-card p-6">
           <div className="flex items-center justify-between mb-8">
-            <h3 className="font-bold flex items-center gap-2">
-              <Clock className="w-5 h-5 text-orange-500" />
-              Pics d'activité de l'audience
+            <h3 className="font-bold flex items-center gap-2 uppercase tracking-tighter italic">
+              <Clock className="w-5 h-5 text-tiktok-cyan" />
+              Pics d'activité en temps réel
             </h3>
-            <span className="text-[10px] font-mono text-gray-500 uppercase">GMT +1 ({state.country})</span>
+            <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest font-black">Sync: GMT +1 ({state.country})</span>
           </div>
           <div className="h-[250px] w-full">
             <ResponsiveContainer width="100%" height="100%">

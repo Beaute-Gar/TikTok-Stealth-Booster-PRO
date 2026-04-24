@@ -1,6 +1,6 @@
 {
-  "name": "Stealth Booster Elite Multi-Network",
-  "description": "Multi-network SaaS platform for TikTok, YouTube, and Instagram creators. Featuring OAuth 2.0 integration, AI content synthesis, growth automation, and dynamic AI-calculated commissions.",
+  "name": "Nexus Analytics Pro",
+  "description": "Professional multi-network dashboard for creators. Unified analytics, OAuth 2.0 verification, and performance-based commission tracking for TikTok, YouTube, and Instagram.",
   "requestFramePermissions": [
     "microphone"
   ],

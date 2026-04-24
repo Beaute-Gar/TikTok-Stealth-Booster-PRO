@@ -36,11 +36,11 @@ export default function SettingsModule({ state }: { state: AppState }) {
       ]
     },
     {
-      title: 'Système Stealth v13',
+      title: 'Système Nexus API v13',
       icon: Settings2,
       items: [
         { label: 'Version Logiciel', value: '13.0.0-stable', type: 'text' },
-        { label: 'Moteur de rendu', value: 'Playwright Chromium', type: 'text' },
+        { label: 'Infrastructure Cloud', value: 'Nexus Global Sync', type: 'text' },
         { label: 'Intelligence Artificielle', value: 'Gemini 3 Flash', type: 'badge', color: 'text-purple-500' },
       ]
     }
@@ -50,7 +50,7 @@ export default function SettingsModule({ state }: { state: AppState }) {
     <div className="max-w-4xl mx-auto space-y-12">
       <div>
         <h1 className="text-3xl bold-heading text-white italic tracking-tight uppercase">PARAMÈTRES SYSTÈME</h1>
-        <p className="text-white/40 text-sm mt-1 uppercase tracking-tight font-medium">Configuration de l'environnement de croissance Stealth v13.</p>
+        <p className="text-white/40 text-sm mt-1 uppercase tracking-tight font-medium">Configuration de l'environnement de performance Nexus v13.</p>
       </div>
 
       <div className="grid grid-cols-1 gap-8">
@@ -95,7 +95,7 @@ export default function SettingsModule({ state }: { state: AppState }) {
             <div className="flex-1">
               <h4 className="text-2xl bold-heading italic text-tiktok-pink mb-2 uppercase">ZONE DE DANGER</h4>
               <p className="text-sm text-white/40 font-bold uppercase tracking-tight mb-8 leading-relaxed">
-                La réinitialisation supprimera toutes vos instances Playwright locales et vos historiques de scripts AI.
+                La réinitialisation supprimera toutes vos configurations locales et vos historiques de rapports Nexus.
               </p>
               <button 
                 onClick={() => {
